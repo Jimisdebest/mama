@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Scherm Disco!</title>
+<style>
+    body {
+      transition: transform 2s ease;
+      text-align: center;
+      margin-top: 50px;
+      font-family: sans-serif;
+      animation: kleurflits 0.5s infinite alternate;
+    }
+ 
+    @keyframes kleurflits {
+      0%   { background-color: red; color: yellow; }
+      25%  { background-color: blue; color: white; }
+      50%  { background-color: lime; color: black; }
+      75%  { background-color: magenta; color: orange; }
+      100% { background-color: cyan; color: purple; }
+    }
+</style>
+</head>
+<body>
+<h1>Feest op je scherm! 🪩</h1>
+<p>Maak je klaar voor chaos...</p>
+ 
+  <!-- Dom geluidje -->
+<audio id="sound" src="https://www.soundjay.com/button/sounds/button-3.mp3" preload="auto"></audio>
+ 
+  <script>
+    setTimeout(() => {
+      // Draai het scherm
+      document.body.style.transform = "rotate(180deg)";
+      // Speel het geluid af
+      const sound = document.getElementById("sound");
+      sound.play();
+    }, 500); // Na 0.5 seconden
+</script>
+</body>
+</html>
