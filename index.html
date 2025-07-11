@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<title>Scherm Disco!</title>
-<style>
+  <meta charset="UTF-8">
+  <title>Kaka Chaos!</title>
+  <style>
     body {
-      transition: transform 2s ease;
+      animation: draaien 4s linear infinite;
       text-align: center;
-      margin-top: 50px;
       font-family: sans-serif;
-      animation: kleurflits 0.5s infinite alternate;
+      background-color: #f0f0f0;
     }
- 
-    @keyframes kleurflits {
-      0%   { background-color: red; color: yellow; }
-      25%  { background-color: blue; color: white; }
-      50%  { background-color: lime; color: black; }
-      75%  { background-color: magenta; color: orange; }
-      100% { background-color: cyan; color: purple; }
+    h1 {
+      font-size: 2em;
+      color: #8B0000;
+      margin-top: 50px;
     }
-</style>
+    @keyframes draaien {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-<h1>Feest op je scherm! 🪩</h1>
-<p>Maak je klaar voor chaos...</p>
- 
-  <!-- Dom geluidje -->
-<audio id="sound" src="https://www.soundjay.com/button/sounds/button-3.mp3" preload="auto"></audio>
- 
+  <h1>💩 KAKA CHAOS ACTIEF! 💩</h1>
+
+  <!-- Geluid automatisch afspelen -->
+  <audio autoplay>
+    <source src="YOUAREANIDIOT.mp3" type="audio/mpeg">
+    Je browser ondersteunt dit audioformaat niet.
+  </audio>
+
   <script>
-    setTimeout(() => {
-      // Draai het scherm
-      document.body.style.transform = "rotate(180deg)";
-      // Speel het geluid af
-      const sound = document.getElementById("sound");
-      sound.play();
-    }, 500); // Na 0.5 seconden
-</script>
+    // Pop-ups met KAKA vibes 😄
+    alert("🚨 WAARSCHUWING: KAKA OVERLOAD!");
+    alert("😂 YOU ARE AN HTML LEGEND!");
+    alert("🧠 Volgende keer misschien iets minder draaien...");
+  </script>
 </body>
 </html>
